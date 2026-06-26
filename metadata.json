@@ -1,0 +1,8 @@
+{
+  "name": "Contacts Manager",
+  "description": "A modern and sleek application to manage your contacts efficiently. Includes features like dashboard statistics, contact filtering, reports, and a theme switcher.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

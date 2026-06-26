@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              background: 'hsl(var(--background))',
+              card: 'hsl(var(--card))',
+              border: 'hsl(var(--border))',
+              text: 'hsl(var(--text))',
+              subtext: 'hsl(var(--subtext))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                hover: 'hsl(var(--primary-hover))',
+                light: 'hsl(var(--primary-light) / 0.1)',
+              },
+              danger: 'hsl(0 70% 55%)',
+              success: 'hsl(140 60% 50%)',
+              warning: 'hsl(40 80% 50%)',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'scale-in': 'scaleIn 0.3s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --background: 220 13% 96%; /* #F5F5F7 */
+        --card: 0 0% 100%; /* #FFFFFF */
+        --border: 0 0% 90%; /* #E5E5E5 */
+        --text: 240 6% 10%; /* #1D1D1F */
+        --subtext: 240 2% 45%; /* #6E6E73 */
+        --primary: 0 0% 0%; /* #000000 */
+        --primary-hover: 0 0% 20%; /* #333333 */
+        --primary-light: 0 0% 0%;
+      }
+      .dark {
+        --background: 220 3% 14%; /* #232526 */
+        --card: 220 3% 20%;       /* #323435 */
+        --border: 240 2% 26%;     /* #414545 */
+        --text: 0 0% 92%;         /* #EAEAEA */
+        --subtext: 0 0% 63%;      /* #A0A0A0 */
+        --primary: 0 0% 100%;     /* #FFFFFF */
+        --primary-hover: 0 0% 88%;/* #E0E0E0 */
+        --primary-light: 0 0% 100%;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
